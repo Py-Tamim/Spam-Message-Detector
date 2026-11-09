@@ -58,5 +58,26 @@ def train():
     joblib.dump(model, MODEL_FILE)
     return
 
+def load_or_train():
+    if MODEL_FILE.exists():
+        return joblib.load(MODEL_FILE)
+    return train()
 
-# ========================================= Continue ===========================================
+def main():
+    model = load_or_train()
+    print("\nSpam Message Detector - type a message ('quit' to exit)\n")
+    while True:
+        msg = input("Message> ").strip()
+        if msg.lower() in {"quit", "exit", "q"}:
+            break
+        if not msg:
+            continue
+        p_not_spam, p_spam = model.predict_proba([msg])[0]
+        if p_spam >= 0.5:
+            print(f"  -> Spam ({p_spam:.1%} confidence)\n")
+        else:
+            print(f"  -> Not spam ({p_not_spam:.1%} confidence)\n")
+
+
+if __name__ == "__main__":
+    main()
