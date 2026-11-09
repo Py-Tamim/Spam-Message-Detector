@@ -34,4 +34,29 @@ def load_data():
     df["is_spam"] = (df["label"] == "spam").astype(int)
     return df
 
+def train():
+    df = load_data()
+    X_train, X_test, y_train, y_test = train_test_split(
+        df["text"],
+        df["is_spam"],
+        test_size=0.2,
+        random_state=42,
+        stratify=df["is_spam"],
+    ) 
+
+    model = make_pipeline(
+        TfidfVectorizer(lowercase=True, stop_words="english", ngram_range=(1, 2)),
+        MultinomialNB(alpha=0.1),
+    )
+    model.fit(X_train, y_train)
+    print("Evaluation on unseen messages:")
+    print(
+        classification_report(
+            y_test, model.predict(X_test), target_names=["Not spam", "Spam"]
+        )
+    )
+    joblib.dump(model, MODEL_FILE)
+    return
+
+
 # ========================================= Continue ===========================================
