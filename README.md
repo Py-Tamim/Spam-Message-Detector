@@ -140,22 +140,7 @@ Spam-Message-Detector/
 ├── spam_model.joblib
 └── README.md
 ```
-
-## ⚠️ Limitations
-
-- Performance depends on the quality and variety of the training dataset.
-- The model mainly learns patterns from message text.
-- New spam patterns may not be detected accurately.
-- The confidence score is a model probability, not a guarantee that the prediction is correct.
-
-## 🚀 Future Improvements
-
-- Test other classification algorithms such as Logistic Regression and Support Vector Machines (SVM).
-- Improve text preprocessing.
-- Add a graphical user interface.
-- Support email spam detection.
-- Train with larger and more recent datasets.
-- Compare different models using accuracy, precision, recall, and F1-score.
+-
 
 ## 🤝 AI Assistance & Acknowledgement
 
@@ -167,5 +152,28 @@ AI assistance included:
 - Finding suitable CSV and text-based datasets for spam message classification.
 - Comparing machine learning algorithms and identifying suitable models for this project.
 - Understanding TF-IDF, Naive Bayes, and text classification.
+
+-
+
+## ⚠️ Limitations
+
+- Performance depends on the quality and variety of the training dataset.
+- The model mainly learns patterns from message text.
+- New spam patterns may not be detected accurately.
+- The confidence score is a model probability, not a guarantee that the prediction is correct.
+
+-
+
+## 🚀 Future Improvements
+
+- Test other classification algorithms such as Logistic Regression and Support Vector Machines (SVM).
+- Improve text preprocessing.
+- Add a graphical user interface.
+- Support email spam detection.
+- Train with larger and more recent datasets.
+- Compare different models using accuracy, precision, recall, and F1-score.
+
+
 ```
 ## This project was developed for educational purposes as part of my learning journey in Machine Learning and Natural Language Processing.
+
