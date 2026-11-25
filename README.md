@@ -175,5 +175,5 @@ AI assistance included:
 
 
 ```
-## This project was developed for educational purposes as part of my learning journey in Machine Learning and Natural Language Processing.
+** Developed for educational purposes as part of my Python programming practice.
 
