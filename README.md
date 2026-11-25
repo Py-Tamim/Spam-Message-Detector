@@ -153,8 +153,6 @@ AI assistance included:
 - Comparing machine learning algorithms and identifying suitable models for this project.
 - Understanding TF-IDF, Naive Bayes, and text classification.
 
--
-
 ## ⚠️ Limitations
 
 - Performance depends on the quality and variety of the training dataset.
@@ -162,7 +160,6 @@ AI assistance included:
 - New spam patterns may not be detected accurately.
 - The confidence score is a model probability, not a guarantee that the prediction is correct.
 
--
 
 ## 🚀 Future Improvements
 
